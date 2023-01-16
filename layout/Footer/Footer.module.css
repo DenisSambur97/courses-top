@@ -1,0 +1,42 @@
+.footer {
+    display: grid;
+
+    padding: 25px 35px;
+    background-color: var(--primary);
+    color: var(--white);
+    font-size: 16px;
+
+    grid-template-columns: 1fr auto auto;
+    gap: 10px 40px;
+    grid-template-rows: auto;
+    grid-template-areas:
+    'roots . agrees conf';
+    align-items: center;
+}
+
+.roots {
+    grid-area: roots;
+}
+
+.agrees {
+    grid-area: agrees;
+}
+
+.conf {
+    grid-area: conf;
+}
+
+.footer a:hover {
+    color: var(--light-gray);
+}
+
+@media (max-width: 550px) {
+    .footer {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            'roots'
+            'agrees'
+            'conf';
+        justify-items: center;
+    }
+}
