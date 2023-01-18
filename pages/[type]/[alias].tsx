@@ -9,13 +9,13 @@ import {ProductModel} from "../../interfaces/product.interface";
 import {firstLevelMenu} from "../../helpers/helpers";
 import {type} from "os";
 import {router} from "next/client";
+import {TopPageComponent} from "../../page-components";
 
-function TopPage({menu, page, products}: TopPageProps): JSX.Element {
-    return (
-        <>
-            {products && products.length}
-        </>
-    )
+function TopPage({firstCategory, page, products}: TopPageProps): JSX.Element {
+    return <TopPageComponent
+        firstCategory={firstCategory}
+        page={page}
+        products={products}/>
 }
 
 export default withLayout(TopPage)
@@ -23,7 +23,7 @@ export default withLayout(TopPage)
 // Какие пути для постраения страницы
 export const getStaticPaths: GetStaticPaths = async () => {
     let paths: string[] = []
-    for (const m of firstLevelMenu){
+    for (const m of firstLevelMenu) {
         //Меню первого уровня
         const {data: menu} = await axios.post<MenuItem[]>(process.env.NEXT_PUBLIC_DOMAIN + '/api/top-page/find', {
             firstCategory: m.id
@@ -38,13 +38,13 @@ export const getStaticPaths: GetStaticPaths = async () => {
 
 // Получение статически для кэширования
 export const getStaticProps: GetStaticProps<TopPageProps> = async ({params}: GetStaticPropsContext<ParsedUrlQuery>) => {
-    if(!params){
+    if (!params) {
         return {
             notFound: true
         }
     }
     const firstCategoryItem = firstLevelMenu.find(m => m.route == params.type)
-    if(!firstCategoryItem){
+    if (!firstCategoryItem) {
         return {
             notFound: true
         }
@@ -54,7 +54,7 @@ export const getStaticProps: GetStaticProps<TopPageProps> = async ({params}: Get
         const {data: menu} = await axios.post<MenuItem[]>(process.env.NEXT_PUBLIC_DOMAIN + '/api/top-page/find', {
             firstCategory: firstCategoryItem.id
         })
-        if(menu.length == 0){
+        if (menu.length == 0) {
             return {
                 notFound: true
             }
@@ -75,14 +75,14 @@ export const getStaticProps: GetStaticProps<TopPageProps> = async ({params}: Get
                 products
             }
         }
-    }catch{
+    } catch {
         return {
             notFound: true
         }
     }
 }
 
-interface TopPageProps extends Record<string, unknown>{
+interface TopPageProps extends Record<string, unknown> {
     menu: MenuItem[]
     firstCategory: TopLevelCategory
     page: TopPageModal
