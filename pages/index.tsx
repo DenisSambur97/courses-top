@@ -4,8 +4,6 @@ import {withLayout} from "../layout/Layout";
 import {GetStaticProps} from "next";
 import axios from "axios";
 import {MenuItem} from "../interfaces/menu.interface";
-import Course from "./courses/[alias]";
-
 
 function Home({menu, firstCategory}: HomeProps): JSX.Element {
     const [rating, setRating] = useState<number>(4)
@@ -35,7 +33,6 @@ function Home({menu, firstCategory}: HomeProps): JSX.Element {
 }
 
 export default withLayout(Home)
-
 
 // Получение статически для кэширования пунктов меню первого уровня.
 export const getStaticProps: GetStaticProps<HomeProps> = async () => {

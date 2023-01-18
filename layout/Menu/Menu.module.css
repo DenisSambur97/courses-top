@@ -3,7 +3,6 @@
     grid-template-columns: 24px 1fr;
     gap: 10px;
     align-items: center;
-    margin-top: 20px;
     font-weight: 500;
     font-size: 18px;
     line-height: 25px;
@@ -28,8 +27,8 @@
     text-transform: uppercase;
     color: var(--dark-gray);
 
-    font-size: 12px;
-    line-height: 16x;
+    font-size: 14px;
+    line-height: 16px;
     font-weight: 300;
 }
 
@@ -41,11 +40,20 @@
     border-left: 1px solid #DFDFDF;
 }
 
+.secondLevelBlock{
+    display: none;
+}
+
+.secondLevelBlockOpened{
+    display: block;
+}
+
 .secondBlockOpened:last-child{
     margin-bottom: 20px;
 }
 
 .thirdLevel{
+    display: block;
     margin-bottom: 10px;
 
     cursor: pointer;

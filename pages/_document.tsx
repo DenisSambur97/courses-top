@@ -4,9 +4,7 @@ export default function Document(){
 
   return (
     <Html lang="ru">
-      <Head >
-          <title>My new Next.JS Application</title>
-    </Head>
+      <Head/>
       <body>
         <Main />
         <NextScript />
