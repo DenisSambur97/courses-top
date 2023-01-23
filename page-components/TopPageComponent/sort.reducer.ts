@@ -21,6 +21,7 @@ export const sortReducer = (state: SortReducerState, action: SortActions) => {
                 products: state.products.sort((a, b) => a.price > b.price ? 1 : -1)
             }
         default:
+
             throw new Error('Неверный тип сортировки')
     }
 }
