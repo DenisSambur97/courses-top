@@ -4,7 +4,7 @@ import cn from "classnames";
 import SearchIcon from "./Search.svg"
 import {Input} from "../Input/Input";
 import {Button} from "../Button/Button";
-import {useState} from "react";
+import React, {useState} from "react";
 import {useRouter} from "next/router";
 
 export const Search = ({className, ...props}: SearchProps): JSX.Element => {
@@ -22,7 +22,7 @@ export const Search = ({className, ...props}: SearchProps): JSX.Element => {
     }
 
     // Поиск при нажатии на кнопку Enter
-    const handleKeyDown = (e: KeyboardEvent) => {
+    const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
       if(e.key == 'Enter'){
           goToSearch()
       }
