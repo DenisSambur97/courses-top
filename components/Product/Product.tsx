@@ -7,12 +7,18 @@ import {Button} from "../Button/Button";
 import {declOfNum, priceRu} from "../../helpers/helpers";
 import {Divider} from "../Divider/Divider";
 import cn from "classnames";
+import Image from "next/image";
 
 export const Product = ({product, className, ...props}: ProductProps): JSX.Element => {
     return (
         <Card className={styles.product}>
             <div className={styles.logo}>
-                <img src={process.env.NEXT_PUBLIC_DOMAIN + product.image} alt={product.title}/>
+                <Image
+                    src={process.env.NEXT_PUBLIC_DOMAIN + product.image}
+                    alt={product.title}
+                    width={70}
+                    height={70}
+                />
             </div>
             <div className={styles.title}>
                 {product.title}
@@ -45,7 +51,7 @@ export const Product = ({product, className, ...props}: ProductProps): JSX.Eleme
             <div className={styles.description}>
                 {product.description}
             </div>
-            <div className={styles.features}>
+            <div className={styles.feature}>
                 {product.characteristics.map(c => (
                     <div className={styles.characteristics} key={c.name}>
                         <span className={styles.characteristicsName}>{c.name}</span>
@@ -65,7 +71,7 @@ export const Product = ({product, className, ...props}: ProductProps): JSX.Eleme
                 </div>}
             </div>
 
-            <Divider className={styles.hr}/>
+            <Divider className={cn(styles.hr, styles.hr2)}/>
 
             <div className={styles.actions}>
                 <Button appearance={"primary"}>Узнать подробнее</Button>
