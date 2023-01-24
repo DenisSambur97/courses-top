@@ -65,7 +65,7 @@
     font-weight: 400;
     font-size: 20px;
     line-height: 27px;
-    align-self: flex-end;
+    align-self: center;
 }
 
 .rating{
@@ -87,6 +87,7 @@
 
 .discount{
     margin-left: 5px;
+
 }
 
 .description{
@@ -118,4 +119,24 @@
 .disadvantages{
     border-left: 2px solid var(--red);
     padding-left: 15px;
+}
+
+.characteristics{
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    gap: 10px;
+    padding-right: 60px;
+    font-size: 16px;
+    line-height: 32px;
+    align-items: baseline;
+}
+
+.characteristicsName{
+    font-weight: bold;
+}
+
+.characteristicsDots{
+    border-bottom: 1px dashed var(--light-gray);
+    margin-bottom: 5px;
+
 }
