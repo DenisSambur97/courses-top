@@ -34,7 +34,7 @@
     grid-column: start / end;
 }
 
-.features{
+.feature{
     grid-column: start / middle;
 }
 
