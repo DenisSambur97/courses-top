@@ -9,3 +9,18 @@
 .editable{
     cursor: pointer;
 }
+
+.wrapper{
+    position: relative;
+}
+
+.error{
+    position: absolute;
+    left: 0;
+    bottom: -27px;
+    color: var(--red);
+}
+
+.errorIs svg{
+    stroke: var(--red);
+}

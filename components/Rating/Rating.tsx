@@ -3,7 +3,8 @@ import styles from './Rating.module.css'
 import cn from "classnames";
 import {useEffect, useState, KeyboardEvent, forwardRef, ForwardedRef} from "react";
 
-export const Rating = forwardRef(({rating, isEditable = false, setRating, ...props}: RatingProps, ref: ForwardedRef<HTMLDivElement>): JSX.Element => {
+// eslint-disable-next-line react/display-name
+export const Rating = forwardRef(({rating, error, isEditable = false, setRating, ...props}: RatingProps, ref: ForwardedRef<HTMLDivElement>): JSX.Element => {
     const [ratingArray, setRatingArray] = useState<JSX.Element[]>(new Array(5).fill(<></>))
 
     useEffect(() => {
@@ -67,8 +68,11 @@ export const Rating = forwardRef(({rating, isEditable = false, setRating, ...pro
     }
 
     return (
-        <div {...props} ref={ref}>
+        <div {...props} ref={ref} className={cn(styles.wrapper, {
+            [styles.errorIs]: error
+        })}>
             {ratingArray.map((r, i) => (<span key={i}>{r}</span>))}
+            {error && <span className={styles.error}>{error.message}</span>}
         </div>
     )
 })

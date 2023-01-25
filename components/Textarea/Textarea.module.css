@@ -2,7 +2,7 @@
     display: block;
     padding: 5px 15px;
 
-    margin-top: 20px;
+    margin-top: 10px;
     min-height: 76px;
     width: 100%;
     color: var(--black);
@@ -16,8 +16,24 @@
     font-size: 16px;
     line-height: 22px;
     font-family: var(--font-family);
+    margin-bottom: 20px;
 }
 
 .textarea::placeholder{
     color: var(--gray )
+}
+
+.textareaWrapper{
+    position: relative;
+}
+
+.error{
+    border: 1px solid var(--red);
+}
+
+.errorMessage{
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    color: var(--red);
 }

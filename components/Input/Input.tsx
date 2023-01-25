@@ -3,8 +3,15 @@ import styles from './Input.module.css'
 import cn from "classnames";
 import {ForwardedRef, forwardRef} from "react";
 
-export const Input = forwardRef(({className, ...props}: InputProps, ref: ForwardedRef<HTMLInputElement>): JSX.Element => {
+// eslint-disable-next-line react/display-name
+export const Input = forwardRef(({className, error, ...props}: InputProps, ref: ForwardedRef<HTMLInputElement>): JSX.Element => {
     return (
-        <input type="text" className={cn(className, styles.input)} ref={ref} {...props}/>
+        <div className={cn(className, styles.inputWrapper)}>
+            <input type="text" className={cn(styles.input, {
+                [styles.error]: error
+            })} ref={ref} {...props}/>
+            {error && <span className={styles.errorMessage}>{error.message}</span>}
+        </div>
+
     )
 })
