@@ -149,6 +149,7 @@
 .opened{
     max-height: inherit;
     padding: 30px;
+    transition: all 0.5s;
 }
 
 @media screen and (max-width: 1320px){
