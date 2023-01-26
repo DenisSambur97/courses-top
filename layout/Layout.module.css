@@ -11,9 +11,7 @@
 }
 
 .header {
-    display: none;
     grid-area: header;
-    background-color: #1DC47E;
     color: #EBEBEB;
 }
 
@@ -36,14 +34,11 @@
         'header'
         'body'
         'footer';
+        gap: 5px;
     }
 
     .sidebar {
         display: none !important;
-    }
-
-    .header {
-        display: block;
     }
 
     .body{
