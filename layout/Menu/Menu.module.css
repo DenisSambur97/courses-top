@@ -23,7 +23,7 @@
 
 .secondLevel{
     margin-bottom: 10px;
-
+    margin-left: -15px;
     cursor: pointer;
     text-transform: uppercase;
     color: var(--dark-gray);
@@ -42,15 +42,9 @@
 }
 
 .secondLevelBlock{
-    display: none;
-}
-
-.secondLevelBlockOpened{
-    display: block;
-}
-
-.secondBlockOpened:last-child{
-    margin-bottom: 20px;
+    overflow: hidden;
+    white-space: nowrap;
+    margin-left: -15px;
 }
 
 .thirdLevel{
