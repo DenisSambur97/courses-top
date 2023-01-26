@@ -33,6 +33,18 @@
     margin-top: 20px;
 }
 
+.error{
+    background: var(--light-red);
+    padding: 20px;
+    position: relative;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+.error .close path{
+    stroke: var(--red);
+}
+
 .successTitle{
     font-weight: bold;
     margin-bottom: 5px;
