@@ -140,20 +140,13 @@
     margin-bottom: 5px;
 }
 
-.closed{
-    overflow: hidden;
-    max-height: 0;
-    padding: 0;
-}
-
-.opened{
-    max-height: inherit;
-    padding: 30px;
-    transition: all 0.5s;
-}
-
 .rateTitle a{
     color: var(--primary);
+}
+
+.reviews{
+    overflow: hidden;
+    padding: 30px;
 }
 
 @media screen and (max-width: 1320px){
