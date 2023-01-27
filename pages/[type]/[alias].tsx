@@ -12,10 +12,15 @@ import {type} from "os";
 import {router} from "next/client";
 import {TopPageComponent} from "../../page-components";
 import {API} from "../../helpers/api";
+import {Error404} from "../404";
 
 function TopPage({firstCategory, page, products}: TopPageProps): JSX.Element {
+    if (!page || !products) {
+        return <Error404/>
+    }
+
     return <>
-        {page && products && <>
+        <>
             <Head>
                 <title>{page.metaTitle}</title>
                 <meta name="description" content={page.metaDescription}/>
@@ -28,7 +33,7 @@ function TopPage({firstCategory, page, products}: TopPageProps): JSX.Element {
                 page={page}
                 products={products}
             />
-        </>}
+        </>
     </>
 }
 
