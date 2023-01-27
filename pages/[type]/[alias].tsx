@@ -7,16 +7,29 @@ import {ParsedUrlQuery} from "querystring";
 import {notFound} from "next/navigation";
 import {ProductModel} from "../../interfaces/product.interface";
 import {firstLevelMenu} from "../../helpers/helpers";
+import Head from "next/head";
 import {type} from "os";
 import {router} from "next/client";
 import {TopPageComponent} from "../../page-components";
 import {API} from "../../helpers/api";
 
 function TopPage({firstCategory, page, products}: TopPageProps): JSX.Element {
-    return <TopPageComponent
-        firstCategory={firstCategory}
-        page={page}
-        products={products}/>
+    return <>
+        {page && products && <>
+            <Head>
+                <title>{page.metaTitle}</title>
+                <meta name="description" content={page.metaDescription}/>
+                <meta property={'og:title'} content={page.metaTitle}/>
+                <meta property={'og:description'} content={page.metaDescription}/>
+                <link rel="icon" href="../../components/favicon.ico"/>
+            </Head>
+            <TopPageComponent
+                firstCategory={firstCategory}
+                page={page}
+                products={products}
+            />
+        </>}
+    </>
 }
 
 export default withLayout(TopPage)
@@ -33,7 +46,8 @@ export const getStaticPaths: GetStaticPaths = async () => {
     }
     return {
         paths,
-        fallback: true
+        // Ставить true при разработке
+        fallback: false
     }
 }
 

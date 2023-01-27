@@ -1,4 +1,4 @@
-import {useContext} from "react";
+import React, {useContext} from "react";
 import styles from './Menu.module.css'
 import {AppContext} from "../../context/app.context";
 import {FirstLevelMenuItem, PageItem} from "../../interfaces/menu.interface";
@@ -47,6 +47,13 @@ export const Menu = (): JSX.Element => {
         }))
     }
 
+    const openSecondLevelKey = (key: React.KeyboardEvent, secondCategory: string) => {
+        if(key.code == 'Space' || key.code == 'Enter'){
+            key.preventDefault()
+            openSecondLevel(secondCategory)
+        }
+    }
+
     // Функция которая создает пункты меню с верхнего уровня
     const buildFirstLevelMenu = () => {
         return (
@@ -79,7 +86,7 @@ export const Menu = (): JSX.Element => {
                     }
                     return (
                         <div key={m._id.secondCategory}>
-                            <div className={styles.secondLevel}
+                            <div  tabIndex={0} onKeyDown={(key: React.KeyboardEvent) => openSecondLevelKey(key, m._id.secondCategory)} className={styles.secondLevel}
                                  onClick={() => openSecondLevel(m._id.secondCategory)}>{m._id.secondCategory}</div>
                             <motion.div
                                 layout
