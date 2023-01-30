@@ -7,6 +7,7 @@ import {Footer} from "./Footer/Footer";
 import {FunctionComponent} from "react";
 import {AppContextProvider, IAppContext} from "../context/app.context";
 import {Up} from "../components";
+import {Footers} from "./Footers/Footers";
 
 const Layout = ({children}: LayoutProps): JSX.Element => {
     return (
@@ -16,7 +17,8 @@ const Layout = ({children}: LayoutProps): JSX.Element => {
             <div className={styles.body}>
                 {children}
             </div>
-            <Footer className={styles.footer}/>
+            {/*<Footer className={styles.footer}/>*/}
+            <Footers className={styles.footers}/>
             <Up/>
         </div>
     )
