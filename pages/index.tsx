@@ -1,36 +1,26 @@
-import {Button, Htag, Input, Parag, Rating, Search, Tag, Textarea} from "../components";
-import {useEffect, useState} from "react";
 import {withLayout} from "../layout/Layout";
 import {GetStaticProps} from "next";
 import axios from "axios";
+import styles from "./index.module.css"
 import {MenuItem} from "../interfaces/menu.interface";
 import {API} from "../helpers/api";
+import {Htag} from "../components";
+import Image from "next/image";
 
 function Home({menu, firstCategory}: HomeProps): JSX.Element {
-    const [rating, setRating] = useState<number>(4)
-
     return (
         <>
-            <Htag tag='h1'>Title</Htag>
-            <Parag textSize='s'>Test text</Parag>
-            <Button appearance='primary' arrow='right'>Кнопка</Button>
-            <Button appearance='ghost' arrow='down'>Кнопка</Button>
-            <Parag textSize='l'>Text text text 1</Parag>
-            <Parag textSize='m'>Text text text 2</Parag>
-            <Parag textSize='s'>Text text text 3</Parag>
-            <Parag>Text text text 3</Parag>
-            <Parag>Text text text 3</Parag>
-            <Tag size='m'>маленький</Tag>
-            <Tag size='l'>большой</Tag>
-            <Tag size='l' color='ghost'>большой</Tag>
-            <Tag size='l' color='green'>большой</Tag>
-            <Tag size='l' color='gray'>большой</Tag>
-            <Tag size='l' color='red'>большой</Tag>
-            <Tag size='l' color='primary'>большой</Tag>
-            <Tag size='l' color='primary' href='#'>большой</Tag>
-            <Rating rating={rating} isEditable setRating={setRating}/>
-            <Input placeholder='тест'/>
-            <Textarea placeholder='Текст отзыва'/>
+            {/*<img className={styles.img} src="/public/main-pic.jpeg" alt={'Studying'}/>*/}
+            {/*<img className={styles.img} src="main-pic.jpeg" alt={'Studying'}/>*/}
+            <Image
+                className={styles.img}
+                src="/main-pic.jpeg"
+                alt={'Hello'}
+                width={1080}
+                height={720}
+            />
+            <div className={styles.title}>Вас приветствует сервис Owl Top!</div>
+            <div className={styles.description}>Здесь вы можете посмотреть какие существуют курсы на интересующую вас тему. А также можете посмотреть дополнительную информацию про курс и отзывы клиентов. <span className={styles.descriptionMarker}>Выберите в меню интересующий вас раздел.</span></div>
         </>
     )
 }
