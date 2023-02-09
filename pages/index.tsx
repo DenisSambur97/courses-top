@@ -4,14 +4,11 @@ import axios from "axios";
 import styles from "./index.module.css"
 import {MenuItem} from "../interfaces/menu.interface";
 import {API} from "../helpers/api";
-import {Htag} from "../components";
 import Image from "next/image";
 
 function Home({menu, firstCategory}: HomeProps): JSX.Element {
     return (
         <>
-            {/*<img className={styles.img} src="/public/main-pic.jpeg" alt={'Studying'}/>*/}
-            {/*<img className={styles.img} src="main-pic.jpeg" alt={'Studying'}/>*/}
             <Image
                 className={styles.img}
                 src="/main-pic.jpeg"

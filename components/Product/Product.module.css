@@ -276,5 +276,13 @@
         "actions"
     ;
     }
+    .actions{
+        display: flex;
+    }
+}
 
+@media screen and (max-width: 340px){
+    .actions{
+        max-width: 180px;
+    }
 }

@@ -12,7 +12,7 @@ export const Sidebar = ({className, ...props}: SidebarProps): JSX.Element => {
     return (
         <div {...props} className={cn(className, styles.sidebar)}>
             <Logo className={styles.logo} onClick={() => router.push('/')}/>
-            <Search/>
+            {/*<Search/> Требуется доработка */}
             <Menu/>
         </div>
     )

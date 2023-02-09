@@ -6,7 +6,6 @@ export default function Document() {
     return (
         <Html lang="ru">
             <Head>
-                <title>MyTop - лучший топ ваканский</title>
                 <link rel="icon" href="/public/favicon.ico"/>
             </Head>
             <body>
