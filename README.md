@@ -3,6 +3,7 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 ## Courses Top
 
 Это приложение для просмотра курсов на интересующую вас тематику, где можно посмотреть рейнтинг курсов, цены а так же отзывы клиентов. This is an application for viewing courses on the topic you are interested in, where you can see the rating of courses, prices, as well as customer reviews.
+[Ссылка на приложение](https://courses-top.vercel.app/)
 
 **Какие task's решались:**
 - Получение данных из API
@@ -21,37 +22,24 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 - Яндекс Метрика
 - ClassNames
 
-[a link](https://courses-top.vercel.app/)
+**Как скачать проект:**
+1. Создать папку для проекта, например top-courses
+2. cd top-courses
+3. git clone https://github.com/DenisSambur97/courses-top.gits
 
-First, run the development server:
-
+**Как запустить проект(в консоли):**
 ```bash
 npm run dev 
 # or
 yarn dev
 ```
-
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+![image](https://user-images.githubusercontent.com/65072293/221532591-02a0c0d2-cb57-4175-a498-3b7e9544cb36.png)
+![image](https://user-images.githubusercontent.com/65072293/221532522-12a5b1d0-c09b-4329-9591-00a51a7ddc28.png)
+![image](https://user-images.githubusercontent.com/65072293/221532871-60bf9baa-d01a-41e4-aa14-2a2de4851d60.png)
+![image](https://user-images.githubusercontent.com/65072293/221532935-e4b8fdea-a13d-4360-afaa-c802ec86150d.png)
+![image](https://user-images.githubusercontent.com/65072293/221533138-c7d9a79b-748c-4ba9-b84c-56b55ef9586a.png)
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
