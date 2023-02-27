@@ -1,6 +1,27 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## Getting Started
+## Courses Top
+
+Это приложение для просмотра курсов на интересующую вас тематику, где можно посмотреть рейнтинг курсов, цены а так же отзывы клиентов. This is an application for viewing courses on the topic you are interested in, where you can see the rating of courses, prices, as well as customer reviews.
+
+**Какие task's решались:**
+- Получение данных из API
+- Отрисовка полученных данных 
+- Анимация компонентов (Framer Motion)
+- Фильтрация данных
+- Написание комментариев и их валидация
+- Типизация
+
+**Какие технологии использовались:**
+- HTML&CSS
+- React, TypeScript, TSX
+- Next.JS
+- Axios(for API)
+- React Hooks Form
+- Яндекс Метрика
+- ClassNames
+
+[a link](https://courses-top.vercel.app/)
 
 First, run the development server:
 
