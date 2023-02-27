@@ -12,9 +12,10 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 - Фильтрация данных
 - Написание комментариев и их валидация
 - Типизация
+- Адаптивность
 
 **Какие технологии использовались:**
-- HTML&CSS
+- HTML, CSS, CSS Grid
 - React, TypeScript, TSX
 - Next.JS
 - Axios(for API)
